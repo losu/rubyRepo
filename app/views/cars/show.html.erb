@@ -1,0 +1,6 @@
+<h1> Samochód </h1>
+<%= @car.brand %>
+<%= @car.car_model %>
+<%= @car.cartype %>
+<%= link_to 'Edytuj', edit_car_path %>
+<%= link_to 'Usuń', car_path(@car.id), method: :delete  %>

@@ -1,0 +1,11 @@
+<h1> panel usera </h1>
+<h3><%=@user.email %></h3>
+<hr>
+<ul>
+  <% @user.brand.each do |car| %>
+      <li>
+      <%= car.brand %>
+      <%= link_to "pokaz", car_path(car.id) %>
+  	</li>
+</ul>
+</hr>
