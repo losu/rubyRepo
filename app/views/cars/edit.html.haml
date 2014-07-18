@@ -1,0 +1,14 @@
+.container
+  %h1 Edytuj samochod
+  = form_for(@car) do |f|
+    - @car.errors.full_messages.each do |err|
+      %li
+        = err
+    .form-group
+      = f.label :Brand
+      = f.text_field :brand, class: 'form-control'
+      = f.label :Model
+      = f.text_field :car_model, class: 'form-control'
+      = f.label :engine_id
+      = f.text_field :engine_id, class: 'form-control'
+      = f.submit 'Edytuj', class: 'btn btn-primary'

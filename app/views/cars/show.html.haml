@@ -1,0 +1,21 @@
+.container	
+	%h1 Samochód
+	Car brand:
+	\#{@car.brand}
+	%br
+	Car model:
+	\#{@car.car_model}
+	%br
+	Car typ:
+	\#{@car.cartype}
+
+	%h4 Engine:
+	Fuel:
+	\#{@car.engine.fueltype}
+	%br
+	Power:
+	\#{@car.engine.power}
+	%br
+	.form-group
+		#{link_to 'Edytuj', edit_car_path, class: 'btn btn-primary'}
+		#{link_to 'Usuń', car_path(@car.id), method: :delete, class: 'btn btn-primary'}

@@ -1,0 +1,19 @@
+.container  
+  %h2 Welcome
+  - if current_user
+    %h3
+      Czesc #{current_user.email}
+    %h1 Lista Samochodów
+    %ul
+      - @car.each do |c|
+        %li
+          = link_to c.brand, car_path(c)
+      = link_to "Dodaj car", new_car_path
+    = link_to 'Wyloguj sie!', destroy_user_session_path, method: :delete
+    = link_to 'Panel Uzytkownika'
+  - else
+    %h3 Siema gosciu !
+    = link_to 'Zarejestruj sie', new_user_registration_path
+    %br/
+    = link_to 'Zaloguj sie!', |
+      new_user_session_path   |
