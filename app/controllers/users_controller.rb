@@ -4,6 +4,10 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :make_sure_its_mine
   
+  def index
+    @user=User.all  
+  end
+
   def show
     @user=current_user
   end
