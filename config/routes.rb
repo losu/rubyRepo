@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
   root 'cars#index'
 
-  resources :cars
+  resources :cars , :engines
 end

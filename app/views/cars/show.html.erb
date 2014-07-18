@@ -1,6 +1,21 @@
 <h1> Samochód </h1>
+
+Car brand:
 <%= @car.brand %>
+</br>
+
+Car model:
 <%= @car.car_model %>
+Car typ:
 <%= @car.cartype %>
+
+</br>
+Engine:
+</br>
+Fuel:
+<%= @car.engine.fueltype %>
+Power:
+<%= @car.engine.power %>
+
 <%= link_to 'Edytuj', edit_car_path %>
 <%= link_to 'Usuń', car_path(@car.id), method: :delete  %>

@@ -1,0 +1,20 @@
+<h1> dodaj engine </h1>
+<%= form_for(@engine) do |f| %>
+	<% @car.errors.full_messages.each do |err| %>
+		<li>
+			<%= err%>
+		</li>
+	<% end %>
+
+	<%= f.label :Fuel  %>
+	<%= f.text_field :fueltype %>
+
+	</br>
+	<%= f.label :Power  %>
+	<%= f.text_field :power %>
+	</br>
+	
+	</br>
+	<%= f.submit "Dodaj!" %>
+	</br>
+<% end %>

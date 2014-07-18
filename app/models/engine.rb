@@ -1,5 +1,5 @@
 class Engine < ActiveRecord::Base
 	has_many :cars
-	validates :fuelType, inclusion:{ in: %w(diesel gas petrol)}
+	validates :fueltype, inclusion:{ in: %w(diesel gas petrol)}
 
 end
